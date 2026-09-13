@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+header{
+    background-color: #FD7B41;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: xx-large;
+    font-family: "Fascinate", system-ui;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#mainHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.headerLine{
+    flex: 1;
+    height: 3px;
+    width:auto;
+    background-color: black;
+}
+
+#mainCardOuter{
+    font-family: 'Courier New', Courier, monospace;
+    /* border: 3px solid black; */
+    display: flex;
+    justify-content: center;
+    max-width: screen;
+}
+
+#mainCardInner{
+    background: #DDDDCB;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    border: 3px solid black;
+    box-shadow: 10px 10px #EDBF9B;
+    border-radius: 20px;
+    height: 410px;
+    width: 700px;
+    padding: 35px;
+    box-sizing: border-box; 
+}
+
+#intro {
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.start {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+    background: #FD7B41;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow:  5px 10px #EDBF9B;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.start:hover {
+    background-color: white;
+}
+
+.start:active {
+    transform: translateY(3px);
+    box-shadow: 5px 6px #EDBF9B;
+}
+
+#detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#detail h2{
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+#detail ul {
+    text-align: left;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+#questionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+#timerBar {
+    background-color: #eee;
+    height: 20px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#timerFill {
+    height: 100%;
+    background-color: #FD7B41;
+    transition: width 1s linear;
+}
+
+#stats {
+    display: flex;
+    flex-direction: row; 
+    gap: 200px;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+.statItems{
+    display: inline;
+}
+
+#question{
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#option{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.option-btn{
+    font-size: 25px;
+    padding: 10px;
+    background: #FD7B41;
+    width: 100%;
+    border-radius: 17px;
+    border: 3px solid black;
+    margin: 2px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.option-btn:hover{
+    background: white;
+}
+
+.option-btn.correct{
+    background-color: greenyellow;
+    border-color: greenyellow;
+}
+
+.option-btn.wrong{
+    background-color: red;
+    border-color: red;
+}
+
+#resultWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+#resultWrapper h2{
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.scoreMsg {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#resultWrapper .start{
+    width: 450px;
+}
+
+#reviewWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+#answerHeading {
+    margin: 0px;
+    padding: 0px;
+    font-size: 35px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.qAndA{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#restart {
+    margin-top: 20px;
+    width: 300px;
+}
+
+
+
+
+
+/* Adjustment for Tablet devices (768px or below) */
+@media (max-width: 768px) {
+    header{
+        font-size: x-large;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    #mainHeader{
+        gap: 10px;
+    }
+
+    #intro {
+        font-size: 37px;
+    }
+}
+
+/* Adjustment for Mobile devices (480px and below) */
+@media (max-width:480px) {
+    header{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    #mainHeader{
+        font-size: medium;
+        gap: 5px;
+    }
+
+    #mainCardInner{
+        margin: 15px;
+        height: 270px;
+        width: 350px;
+        padding: 10px; 
+    }
+
+    #intro {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .start {
+        font-size: 17px;
+        width: 150px;
+        height: 50px;
+    }
+
+    #detail {
+        font-size: 12px;
+    }
+
+    #detail ul {
+        padding-left: 20px;
+        font-weight: lighter;
+    }
+
+    #instructionBtn {
+        font-size: 17px;
+        height: 40px;
+        width: 120px;
+    }
+
+    #questionWrapper {
+        gap: 5px;
+        height: 190px;
+        justify-content: flex-start;
+        text-align: center;
+    }
+
+    #timerBar {
+        height: 8px;
+    }
+
+    #stats {
+        gap: 90px;
+        font-size: 15px;
+    }
+
+    #question{
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    
+    .option-btn{
+        font-size: 15px;
+        padding: 5px;
+        border: 2px solid black;
+    }
+
+    #resultWrapper {
+        gap: 10px;
+    }
+
+    #resultWrapper h2{
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    .scoreMsg {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #resultWrapper .start{
+        margin-top: 0px;
+        width: 200px;
+    }
+
+    #answerHeading {
+        font-size: 17px;
+    }
+
+    .qAndA{
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+
+    #restart {
+        font-size: 13px;
+        margin-top: 10px;
+        width: 110px;
+        height: 35px;
+    }
+
+}
