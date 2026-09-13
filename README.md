@@ -6,7 +6,7 @@ Quizzly was created to practice building interactive React interfaces, managing 
 
 ## 🚀 Live Demo
 
-**[View the Live Website]((https://rosiroses.github.io/Quizzly/))**
+**[View the Live Website](https://rosiroses.github.io/Quizzly/)**
 
 ## Features
 
